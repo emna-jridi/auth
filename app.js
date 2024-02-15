@@ -1,9 +1,27 @@
-require("dotenv").config()
+require("dotenv").config();
 
 const express = require('express')
 const app = express();
+
 const connectDB = require('./db/connect'); 
-const port = 4000;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const port = process.env.PORT || 4000;
+
 const start = async () => {
     try {
         await connectDB(process.env.MONGO_URI)
@@ -12,5 +30,6 @@ const start = async () => {
         console.log(error);
     }
 }
-start()
+
+start(); 
 //KbrgA5oAO8MG5NGI

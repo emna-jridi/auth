@@ -4,18 +4,12 @@ const express = require('express')
 const app = express();
 
 const connectDB = require('./db/connect'); 
+const router = require('./routes/user')
 
+//middleware 
+app.use(express.json())
 
-
-
-
-
-
-
-
-
-
-
+app.use('/api/v1', router)
 
 
 
